@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements GitHubSearchAdapt
     @Override
     public void onSearchItemClick(GitHubUtils.GitHubRepo repo) {
         Intent intent = new Intent(this, RepoDetailActivity.class);
+        intent.putExtra(GitHubUtils.EXTRA_GITHUB_REPO, repo);
         startActivity(intent);
     }
 
